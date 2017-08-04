@@ -1,0 +1,7 @@
+If user allow for ssh then use this trick --->
+
+echo "exec sh" > .bashrc
+
+then
+
+ssh username@ip -p [port number]
